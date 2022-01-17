@@ -3,21 +3,21 @@
 ### 基本概念和链表思想
 
 - 链表的基本概念和结构
-
+  
   > 链表从js中的表现形式来看，其实就是一个具有一个属性用于存储数据，有一个属性用于存储下一个节点地址引用的对象结构，简易链表结构如下：
-  >
+  > 
   > function LinkNode(val, next=null) {
-  >
-  > ​	this.val = val;
-  >
-  > ​	this.next = next;
-  >
+  > 
+  > ​    this.val = val;
+  > 
+  > ​    this.next = next;
+  > 
   > }
-  >
+  > 
   > 我们经常听说的区块链，其实本质上就是一个链表结构。至于链表结构都有哪些应用场景，下文会有详细讲解
 
 - 链表思想
-
+  
   > 按照个人的理解，链表思想其实并不局限于链表这样的一个数据结构，而是拥有一种特性：每一个节点都有一个唯一指向的结构或逻辑我们都可以认为是具备链表思想的结构。如果觉得这样理解太过于抽象，待会我们一起刷一下LeetCode的202题，你应该就能够有一个更加清晰的了解了
 
 ### 链表和链表思想在我们常见的框架中的应用
@@ -51,11 +51,11 @@
 #### 141. 环形链表
 
 > 题目描述：
->
+> 
 > 给定一个链表，判断链表中是否有环。
->
+> 
 > 如果链表中有某个节点，可以通过连续跟踪 next 指针再次到达，则链表中存在环。 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。注意：pos 不作为参数进行传递，仅仅是为了标识链表的实际情况。
->
+> 
 > 如果链表中存在环，则返回 true 。 否则，返回 false 。
 
 ##### 解题思路
@@ -107,20 +107,15 @@ function hasCycle(head: ListNode | null): boolean {
     return slow === fast;
 };
 // @lc code=end
-
-
 ```
-
-
 
 #### 142. 环形链表II
 
 > 给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
->
+> 
 > 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。注意，pos 仅仅是用于标识环的情况，并不会作为参数传递到函数中。
->
+> 
 > 说明：不允许修改给定的链表。
->
 
 ##### 解题思路
 
@@ -186,17 +181,14 @@ function detectCycle(head: ListNode | null): ListNode | null {
 
 }
 // @lc code=end
-
 ```
-
-
 
 #### 202. 快乐数（链表思想的体现）
 
 > 编写一个算法来判断一个数 n 是不是快乐数。
->
+> 
 > 「快乐数」定义为：
->
+> 
 > 对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和。
 > 然后重复这个过程直到这个数变为 1，也可能是 无限循环 但始终变不到 1。
 > 如果 可以变为  1，那么这个数就是快乐数。
@@ -258,18 +250,14 @@ function getNext(x: number): number {
 
 
 // @lc code=end
-
-
 ```
-
-
 
 #### 206. 反转链表
 
 > 反转一个单链表。
->
+> 
 > 示例:
->
+> 
 > 输入: 1->2->3->4->5->NULL
 > 输出: 5->4->3->2->1->NULL
 > 进阶:
@@ -321,21 +309,17 @@ function reverseList(head: ListNode | null): ListNode | null {
 
 };
 // @lc code=end
-
-
 ```
-
-
 
 #### 92. 反转链表II
 
 > 反转从位置 m 到 n 的链表。请使用一趟扫描完成反转。
->
+> 
 > 说明:
 > 1 ≤ m ≤ n ≤ 链表长度。
->
+> 
 > 示例:
->
+> 
 > 输入: 1->2->3->4->5->NULL, m = 2, n = 4
 > 输出: 1->4->3->2->5->NULL
 
@@ -402,22 +386,18 @@ function reverseBetween(head: ListNode | null, left: number, right: number): Lis
     return pre.next;
 };
 // @lc code=end
-
-
 ```
-
-
 
 #### 25. K个一组反转链表
 
 > 给你一个链表，每 k 个节点一组进行翻转，请你返回翻转后的链表。
->
+> 
 > k 是一个正整数，它的值小于或等于链表的长度。
->
+> 
 > 如果节点总数不是 k 的整数倍，那么请将最后剩余的节点保持原有顺序。
->
+> 
 > 进阶：
->
+> 
 > 你可以设计一个只使用常数额外空间的算法来解决此问题吗？
 > 你不能只是单纯的改变节点内部的值，而是需要实际进行节点交换。
 
@@ -481,16 +461,12 @@ function reverseKGroup(head: ListNode | null, k: number): ListNode | null {
     return hair.next;
 };
 // @lc code=end
-
-
 ```
-
-
 
 #### 24. 两两交换链表
 
 > 给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。
->
+> 
 > **你不能只是单纯的改变节点内部的值**，而是需要实际的进行节点交换。
 
 ##### 解题思路
@@ -545,25 +521,21 @@ function swapPairs(head: ListNode | null): ListNode | null {
     return hair.next;
 };
 // @lc code=end
-
-
 ```
-
-
 
 #### 61. 旋转链表
 
 > 给定一个链表，旋转链表，将链表每个节点向右移动 k 个位置，其中 k 是非负数。
->
+> 
 > 示例 1:
->
+> 
 > 输入: 1->2->3->4->5->NULL, k = 2
 > 输出: 4->5->1->2->3->NULL
 > 解释:
 > 向右旋转 1 步: 5->1->2->3->4->NULL
 > 向右旋转 2 步: 4->5->1->2->3->NULL
 > 示例 2:
->
+> 
 > 输入: 0->1->2->NULL, k = 4
 > 输出: 2->0->1->NULL
 > 解释:
@@ -598,7 +570,7 @@ function swapPairs(head: ListNode | null): ListNode | null {
  * }
  */
 function rotateRight(head: ListNode | null, k: number): ListNode | null {
-    
+
     if(!head) return head;
 
     let n = 1, p = head;
@@ -624,14 +596,10 @@ function rotateRight(head: ListNode | null, k: number): ListNode | null {
     // 断环
     p.next = null;
     return head;
-    
+
 };
 // @lc code=end
-
-
 ```
-
-
 
 #### 19. 删除链表倒数第n个节点
 
@@ -680,22 +648,18 @@ function removeNthFromEnd(head: ListNode | null, n: number): ListNode | null {
     return hair.next;
 };
 // @lc code=end
-
-
 ```
-
-
 
 #### 83. 删除排序链表的重复元素
 
 > 给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。
->
+> 
 > 示例 1:
->
+> 
 > 输入: 1->1->2
 > 输出: 1->2
 > 示例 2:
->
+> 
 > 输入: 1->1->2->3->3
 > 输出: 1->2->3
 
@@ -747,22 +711,18 @@ function deleteDuplicates(head: ListNode | null): ListNode | null {
     return head;
 };
 // @lc code=end
-
-
 ```
-
-
 
 #### 82. 删除排序链表的重复元素II
 
 > 给定一个排序链表，删除所有含有重复数字的节点，只保留原始链表中 没有重复出现 的数字。
->
+> 
 > 示例 1:
->
+> 
 > 输入: 1->2->3->3->4->4->5
 > 输出: 1->2->5
 > 示例 2:
->
+> 
 > 输入: 1->1->1->2->3
 > 输出: 2->3
 
@@ -811,8 +771,6 @@ function deleteDuplicates(head: ListNode | null): ListNode | null {
     return hair.next;
 };
 // @lc code=end
-
-
 ```
 
 #### [287. 寻找重复数](https://leetcode-cn.com/problems/find-the-duplicate-number/)
@@ -842,4 +800,3 @@ function findDuplicate(nums: number[]): number {
   return p;
 }
 ```
-
